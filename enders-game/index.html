@@ -356,6 +356,115 @@ footer a { color: var(--gold); text-decoration: none; }
 .anim-d3 { animation-delay: 0.3s; }
 .anim-d4 { animation-delay: 0.4s; }
 
+/* ─── REPRESENTATION SECTION ─── */
+.representation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+}
+.representation-card {
+  background: var(--navy-mid);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.25s;
+}
+.representation-card:hover {
+  border-color: rgba(201,149,58,0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.concept-card {
+  background: linear-gradient(135deg, rgba(201,149,58,0.08) 0%, var(--navy-mid) 100%);
+  border-color: rgba(201,149,58,0.2);
+}
+.rep-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.rep-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.rep-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--ri1-bg);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid var(--gold-light);
+  flex-shrink: 0;
+}
+.rep-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--cream);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.rep-subtitle {
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  padding-left: 0.2rem;
+}
+.rep-content {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+.rep-content p {
+  margin-bottom: 1rem;
+}
+.rep-content strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.rep-analysis {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+.rep-example, .rep-textual {
+  background: rgba(255,255,255,0.02);
+  border-left: 3px solid var(--gold);
+  padding: 1.2rem 1.4rem;
+  border-radius: 0 6px 6px 0;
+  margin: 1.5rem 0;
+}
+.rep-example h4, .rep-textual h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+.rep-example p, .rep-textual p {
+  margin-bottom: 0.8rem;
+}
+.rep-example p:last-child, .rep-textual p:last-child {
+  margin-bottom: 0;
+}
+.rep-effect {
+  background: rgba(201,149,58,0.06);
+  border: 1px solid rgba(201,149,58,0.2);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-top: 1.5rem;
+  font-size: 0.82rem;
+  color: var(--gold-light);
+  line-height: 1.7;
+}
+.rep-effect strong {
+  color: var(--gold);
+}
+
 /* ─── LITERARY CRAFT SECTION ─── */
 .craft-grid {
   display: grid;
@@ -583,6 +692,7 @@ footer a { color: var(--gold); text-decoration: none; }
     <a href="#overview" id="nav-overview">Overview</a>
     <a href="#ri" id="nav-ri">Rep. Ideas</a>
     <a href="#characters" id="nav-characters">Characters</a>
+    <a href="#representation" id="nav-representation">Representation</a>
     <a href="#quotes" id="nav-quotes">Quotes</a>
     <a href="#essays" id="nav-essays">Essays</a>
     <a href="#craft" id="nav-craft">Craft</a>
@@ -719,11 +829,227 @@ footer a { color: var(--gold); text-decoration: none; }
   <div class="char-grid" id="char-grid"></div>
 </section>
 
+<!-- REPRESENTATION -->
+<div class="divider"></div>
+<section class="section" id="representation">
+  <div class="section-header">
+    <div class="section-label">04 — Representation</div>
+    <h2>How Card Re-Presents Ideas, Issues &amp; Groups</h2>
+    <p>
+      Representation is how texts present ideas, issues, or groups back to us. Texts are not passive reflections
+      of reality — they actively shape how we think. Card's novel doesn't just show us war or childhood; it
+      constructs a specific interpretation of these concepts designed to make us question institutional power.
+    </p>
+  </div>
+
+  <div class="representation-grid">
+    <!-- Concept Card -->
+    <div class="representation-card concept-card">
+      <div class="rep-header">
+        <span class="rep-icon">📖</span>
+        <h3>Understanding Representation</h3>
+      </div>
+      <div class="rep-content">
+        <p>
+          <strong>Definition:</strong> Representation is how ideas, issues, or groups are presented to us in texts.
+          The key is in the name — <em>(re)presentation</em>. Texts re-present the world back to us, but this
+          re-presentation is never neutral. It's always an interpretation shaped by the author's perspective,
+          context, and purpose.
+        </p>
+        <p>
+          <strong>Card's Context:</strong> Orson Scott Card is a conservative Mormon who has been widely criticized
+          for homophobic views (he has stated that homosexuality is a sin that weakens society). This shapes his
+          perspective. Card believes in meritocracy — that the best ideas, people, and societies win for a reason.
+          He wrote that "history is shaped by the use of power ... a great military leader imposes his will on enemy,
+          and makes his own army a willing extension of himself."
+        </p>
+        <p>
+          <strong>1985 vs. 2026:</strong> The novel was written during the Cold War, reflecting anxieties about
+          ideological conflict between capitalism and communism. However, Card's work is eerily <em>prescient</em>
+          (showing knowledge before it occurs) — his depiction of the end of a unipolar world and the resulting
+          geopolitical tensions mirrors contemporary concerns about U.S.-Russia-China relations. The novel is received
+          differently now than in 1985 because we no longer live under Cold War binaries, yet many of its
+          critiques remain disturbingly relevant.
+        </p>
+        <p>
+          <strong>Card's Purpose:</strong> Card wanted to represent children as a "perpetual, self-renewing underclass,
+          helpless to escape from the decision of adults until they become adults themselves" — at which point they
+          perpetuate the same cycle of abuse. He explicitly states that fiction offers "the truth of our own self story"
+          and wants readers to see their own experiences of powerlessness reflected in Ender's struggle.
+        </p>
+      </div>
+    </div>
+
+    <!-- Representation 1: Language & Fascism -->
+    <div class="representation-card">
+      <div class="rep-header">
+        <span class="rep-badge">REP 1</span>
+        <h3>Language as a Tool of State Violence</h3>
+      </div>
+      <div class="rep-subtitle">How fascism is guarded and protected by linguistic control</div>
+      <div class="rep-content">
+        <p class="rep-analysis">
+          Card represents <strong>language as the primary instrument through which authoritarian regimes secure
+          compliance</strong>. This is not a fictional concept — scholars like Luo and Wang (2025), Weiss (2019),
+          and Rosenfeld and Wallace (2024) have documented how authoritarian states create narratives, censor language,
+          and manufacture propaganda to control populations. The novel demonstrates that what something is called
+          determines how it is understood, and those who control terminology control reality.
+        </p>
+        <div class="rep-example">
+          <h4>Real-World Parallel</h4>
+          <p>
+            Consider the Mujahideen in Afghanistan. When the U.S. supported them against the Soviets in the 1980s,
+            they were called "freedom fighters" (mujahideen means "one who struggles" in Arabic). In the 1990s and 2000s,
+            when the same groups turned against the U.S., they became "terrorists" — the Taliban and Al-Qaeda. The group
+            didn't change. The language did. And the language shaped public support for military intervention.
+          </p>
+        </div>
+        <div class="rep-textual">
+          <h4>In Ender's Game</h4>
+          <p>
+            Graff embodies this logic. He claims "all who want to" will survive Battle School, framing child deaths
+            as failures of individual will rather than institutional violence. When confronted about lying, he responds:
+            "It's a half truth. You can worry about the other half after we win this war." He tells Ender that
+            "Human beings are free except when humanity needs them" — conditional freedom that evaporates the moment
+            the institution requires obedience.
+          </p>
+          <p>
+            Ender internalizes this logic, reflecting that "Sometimes lies were more dependable than truth." Card is
+            demonstrating that authoritarian language doesn't suppress truth through censorship alone — it redefines
+            truth as whatever serves institutional power. The lie becomes more reliable than reality because the lie
+            can be controlled.
+          </p>
+        </div>
+        <p class="rep-effect">
+          <strong>Analytical use:</strong> When discussing how Card critiques fascism or state power, point to the
+          novel's representation of language as a weapon. Show how Graff's euphemisms ("half truth"), conditional
+          statements ("free except when"), and narrative control (framing survival as a matter of will) mirror
+          real-world authoritarian discourse. The novel reveals that fascism doesn't announce itself — it speaks
+          itself into being through the colonization of language.
+        </p>
+      </div>
+    </div>
+
+    <!-- Representation 2: Othering -->
+    <div class="representation-card">
+      <div class="rep-header">
+        <span class="rep-badge">REP 2</span>
+        <h3>Othering as Social Control</h3>
+      </div>
+      <div class="rep-subtitle">How the state uses hatred of minorities to maintain hegemonic power</div>
+      <div class="rep-content">
+        <p class="rep-analysis">
+          Card represents <strong>othering as a mechanism through which dominant groups maintain power by
+          constructing certain groups as fundamentally different, dangerous, and therefore legitimate targets
+          of violence</strong>. This process doesn't originate with individual prejudice — it's a structural
+          feature of state power. Scholars like Roberts and Schiavento (2017), Canales (2000), and Said (1978)
+          have documented how dominant groups target minorities to consolidate authority, and how children
+          internalize and reproduce these hierarchies as survival strategies.
+        </p>
+        <div class="rep-example">
+          <h4>Real-World Parallel</h4>
+          <p>
+            Genocides operate through othering. The Nazis rose to power by constructing Jews, Roma, disabled people,
+            and other minorities as threats to German society. This isn't ancient history — it's a pattern that
+            repeats. And it begins in childhood: children who grow up in societies where racism, sexism, and homophobia
+            are normalized will deploy those same logics against peers to secure social power. Marginalized children
+            often engage in self-deprecating humor as a defensive strategy — making the joke first so they can't be
+            targeted. This is nearly universal among children navigating hostile environments.
+          </p>
+        </div>
+        <div class="rep-textual">
+          <h4>In Ender's Game</h4>
+          <p>
+            The International Fleet others the Formics by calling them "buggers" — a term that dehumanizes them as
+            insects, making their extermination morally permissible. Ender reflects on whether the Formics do the same,
+            wondering if they call humans "slimies" because of our soft, oily skin. The novel reveals that the naming
+            isn't incidental — it's ideological work that makes genocide thinkable.
+          </p>
+          <p>
+            Children at Battle School reproduce this logic. Ender uses a racial slur against Alai; students mock
+            Bernard with homophobic jokes (encouraged by the institution as "efficient control"); Rose de Nose
+            preemptively mocks his own Jewish identity to "forestall the mocking comments of anti-semites," but
+            this self-othering only weakens his authority. Card is demonstrating that othering fractures solidarity:
+            children cannot unite against their oppressors because they're too busy policing each other along
+            lines of race, religion, gender, and sexuality.
+          </p>
+          <p>
+            Even Ender's name is a form of othering — "Ender" marks him as a Third, the end of his family's allotted
+            children. The name is designed to make him feel unwanted, disposable, easier to exploit.
+          </p>
+        </div>
+        <p class="rep-effect">
+          <strong>Analytical use:</strong> Use this representation to discuss how Card critiques systemic prejudice.
+          The novel shows that racism, sexism, and homophobia aren't individual moral failings — they're tools of
+          state power. Children don't invent prejudice; they learn it from institutions and deploy it strategically.
+          Card's representation reveals that othering is both top-down (the state others the Formics) and lateral
+          (children other each other), creating a total system in which solidarity becomes impossible.
+        </p>
+      </div>
+    </div>
+
+    <!-- Representation 3: Collectivism -->
+    <div class="representation-card">
+      <div class="rep-header">
+        <span class="rep-badge">REP 3</span>
+        <h3>Collectivism as Wartime Necessity</h3>
+      </div>
+      <div class="rep-subtitle">How collective identity dissolves individual moral reasoning</div>
+      <div class="rep-content">
+        <p class="rep-analysis">
+          Card represents <strong>collectivism as a tool through which states secure compliance by dissolving
+          individual identity into group identity</strong>. Kalyvas (2018) documents how institutions use collective
+          nouns ("the army," "the team," "humanity") to create behavioral expectations and loyalty structures.
+          Bruneau and Kteily (2017) demonstrate that collective frameworks enable dehumanization: when you're not
+          killing a person but "eliminating a segment of an enemy organization," the moral calculus shifts.
+          Collectivism changes what counts as justifiable violence.
+        </p>
+        <div class="rep-example">
+          <h4>Real-World Parallel</h4>
+          <p>
+            Collectivism is central to both fascism and communism — authoritarian regimes across the political spectrum
+            use it to override individual conscience. Liberal democracies like Australia are historically exceptional;
+            most of human history has been lived under regimes that prioritized collective identity over individual
+            rights. The human brain is evolutionarily wired to accept collective control — it's easy to revert to
+            this logic under conditions of perceived threat.
+          </p>
+        </div>
+        <div class="rep-textual">
+          <h4>In Ender's Game</h4>
+          <p>
+            The International Fleet treats children as state property. Graff tells Ender's parents that Ender "has been
+            ours from then, if he qualified" — the conditional "if he qualified" implies that Ender's personhood is
+            contingent on his usefulness. Graff later tells Ender that "individual human beings are all tools" and
+            that survival depends on being "good tools." This is collectivism rendered explicit: individuals have value
+            only insofar as they serve collective purposes.
+          </p>
+          <p>
+            Ender internalizes this logic. When he runs Dragon Army, he replicates Graff's methods, using the same
+            collective behavioral management techniques. He reflects: "Is it some law of human nature that you inevitably
+            become whatever your first commander was?" Card is showing that collectivism reproduces itself —
+            those who are subjected to it learn to impose it on others. The cycle perpetuates because the logic becomes
+            internalized as natural.
+          </p>
+        </div>
+        <p class="rep-effect">
+          <strong>Analytical use:</strong> Use this to discuss how Card represents institutional power as operating
+          through the dissolution of individual identity. The novel demonstrates that collectivism isn't solidarity —
+          it's domination. It makes violence permissible by distributing moral responsibility across the group.
+          When Ender commits xenocide, no individual is responsible because "humanity" made the decision. Card's
+          representation reveals that collective language ("we," "humanity," "the race") is a technology of control
+          that immunizes institutions from accountability.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- KEY QUOTES -->
 <div class="divider"></div>
 <section class="section" id="quotes">
   <div class="section-header">
-    <div class="section-label">04 — Key Quotes</div>
+    <div class="section-label">05 — Key Quotes</div>
     <h2>Evidence, Organised by Representative Idea</h2>
     <p>Use these in your essays. Don't block-quote — embed them in your analysis and explain the effect.</p>
   </div>
@@ -741,7 +1067,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <div class="divider"></div>
 <section class="section" id="essays">
   <div class="section-header">
-    <div class="section-label">05 — Exemplar Essays</div>
+    <div class="section-label">06 — Exemplar Essays</div>
     <h2>Six Model Essays (A/B Grade Standard)</h2>
     <p>
       These essays demonstrate how to build analytical arguments using the six representative ideas.
@@ -829,7 +1155,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <div class="divider"></div>
 <section class="section" id="craft">
   <div class="section-header">
-    <div class="section-label">06 — Literary Craft</div>
+    <div class="section-label">07 — Literary Craft</div>
     <h2>Stylistic &amp; Narrative Techniques</h2>
     <p>
       Card's novel isn't just what it says — it's how it says it. These literary devices shape meaning,
@@ -981,7 +1307,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <div class="divider"></div>
 <section class="section" id="research">
   <div class="section-header">
-    <div class="section-label">07 — Extension</div>
+    <div class="section-label">08 — Extension</div>
     <h2>Academic Research Paper</h2>
     <p>
       <strong>For advanced students:</strong> A university-level critical analysis examining how Card's novel
@@ -1341,7 +1667,7 @@ function renderQuotes() {
 
 // ─── NAV HIGHLIGHT ON SCROLL ────────────────────────────────────
 function updateNav() {
-  const sections = ['overview','ri','characters','quotes','essays','craft','research'];
+  const sections = ['overview','ri','characters','representation','quotes','essays','craft','research'];
   let current = '';
   sections.forEach(id => {
     const el = document.getElementById(id);
