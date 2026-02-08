@@ -28,6 +28,8 @@
   --ri4: #7b6b9e; --ri4-bg: rgba(123,107,158,0.12); --ri4-border: rgba(123,107,158,0.3);
   --ri5: #c47a3a; --ri5-bg: rgba(196,122,58,0.12); --ri5-border: rgba(196,122,58,0.3);
   --ri6: #4a8f6a; --ri6-bg: rgba(74,143,106,0.12); --ri6-border: rgba(74,143,106,0.3);
+  --ri7: #8b6ba8; --ri7-bg: rgba(139,107,168,0.12); --ri7-border: rgba(139,107,168,0.3);
+  --ri8: #b86d5f; --ri8-bg: rgba(184,109,95,0.12); --ri8-border: rgba(184,109,95,0.3);
 
   font-family: 'Inter', sans-serif;
   color: var(--text-primary);
@@ -354,11 +356,221 @@ footer a { color: var(--gold); text-decoration: none; }
 .anim-d3 { animation-delay: 0.3s; }
 .anim-d4 { animation-delay: 0.4s; }
 
+/* ─── LITERARY CRAFT SECTION ─── */
+.craft-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.craft-card {
+  background: var(--navy-mid);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.25s;
+}
+.craft-card:hover {
+  border-color: rgba(201,149,58,0.25);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.craft-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.craft-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.craft-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: var(--cream);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.craft-analysis {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+.craft-analysis strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.craft-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+.craft-quote {
+  border-left: 3px solid var(--gold);
+  padding: 0.8rem 1.1rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 0 6px 6px 0;
+}
+.craft-quote blockquote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--cream);
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+.craft-quote .quote-context {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
+}
+.craft-effect {
+  font-size: 0.82rem;
+  color: var(--gold-light);
+  line-height: 1.7;
+  padding: 1rem 1.2rem;
+  background: rgba(201,149,58,0.06);
+  border-radius: 6px;
+  border-left: 3px solid var(--gold);
+}
+.craft-effect strong {
+  color: var(--gold);
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 700px) {
   .overview-grid { grid-template-columns: 1fr; }
   .char-grid { grid-template-columns: 1fr; }
   .nav-links a { font-size: 0.7rem; padding: 0.35rem 0.5rem; }
+  .essay-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── ESSAYS SECTION ─── */
+.essay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.2rem;
+}
+.essay-card {
+  background: var(--navy-mid);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 1.8rem;
+  transition: all 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+.essay-card:hover {
+  border-color: rgba(201,149,58,0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+.essay-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+.essay-badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+.essay-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: var(--cream);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.essay-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+.essay-btn {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--gold-light);
+  border-radius: 6px;
+  transition: all 0.2s;
+  text-align: center;
+}
+.essay-btn:hover {
+  background: var(--ri1-bg);
+  border-color: var(--gold);
+}
+
+/* ─── RESEARCH PAPER SECTION ─── */
+.research-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  background: var(--gold);
+  color: var(--navy);
+  text-decoration: none;
+  padding: 0.75rem 1.3rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  margin-top: 1.2rem;
+}
+.research-download-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(201,149,58,0.3);
+}
+.research-embed-note {
+  background: var(--navy-mid);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 1.5rem 1.8rem;
+  margin: 1.5rem 0;
+}
+.research-embed-note p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+}
+.research-embed-note p:last-child {
+  margin-bottom: 0;
+}
+.research-embed-note strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+.research-note {
+  background: rgba(201,149,58,0.08);
+  border: 1px solid rgba(201,149,58,0.2);
+  border-radius: 8px;
+  padding: 0.9rem 1.2rem;
+  margin-top: 1.5rem;
+}
+.research-note p {
+  font-size: 0.75rem;
+  color: rgba(201,149,58,0.85);
+  line-height: 1.6;
+}
+.research-note strong {
+  color: var(--gold);
 }
 </style>
 </head>
@@ -372,6 +584,9 @@ footer a { color: var(--gold); text-decoration: none; }
     <a href="#ri" id="nav-ri">Rep. Ideas</a>
     <a href="#characters" id="nav-characters">Characters</a>
     <a href="#quotes" id="nav-quotes">Quotes</a>
+    <a href="#essays" id="nav-essays">Essays</a>
+    <a href="#craft" id="nav-craft">Craft</a>
+    <a href="#research" id="nav-research">Research</a>
   </div>
 </nav>
 
@@ -471,7 +686,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
     </div>
     <div class="podcast-info">
-      <h4>How Ender's Game Manufactures Child Soldiers</h4>
+      <h4>Summary of Ideas in Ender's Game — 16 Minute Podcast</h4>
       <p>Notebook LM podcast — click to open and listen</p>
     </div>
   </a>
@@ -520,6 +735,281 @@ footer a { color: var(--gold); text-decoration: none; }
 
   <div class="quotes-filter" id="quotes-filter"></div>
   <div id="quote-blocks"></div>
+</section>
+
+<!-- EXEMPLAR ESSAYS -->
+<div class="divider"></div>
+<section class="section" id="essays">
+  <div class="section-header">
+    <div class="section-label">05 — Exemplar Essays</div>
+    <h2>Six Model Essays (A/B Grade Standard)</h2>
+    <p>
+      These essays demonstrate how to build analytical arguments using the six representative ideas.
+      Each essay uses TEEEL structure and embeds evidence from the text. Read them to see how analytical
+      writing works, then write your own. Click to read online or download.
+    </p>
+  </div>
+
+  <div class="essay-grid">
+    <div class="essay-card">
+      <div class="essay-header">
+        <span class="essay-badge" style="background:var(--ri1-bg);color:var(--ri1)">RI 1</span>
+        <h3>Liberalism and Capital as Symbolic Violence</h3>
+      </div>
+      <p class="essay-desc">
+        How the International Fleet uses the rhetoric of freedom and meritocracy to legitimate total control.
+        Explores symbolic violence, false choice, and the illusion of autonomy within authoritarian systems.
+      </p>
+      <a href="Essay_1_Liberalism_Capital_Symbolic_Violence.docx" download class="essay-btn">Download Essay</a>
+    </div>
+
+    <div class="essay-card">
+      <div class="essay-header">
+        <span class="essay-badge" style="background:var(--ri2-bg);color:var(--ri2)">RI 2</span>
+        <h3>Fascist Doublespeak</h3>
+      </div>
+      <p class="essay-desc">
+        Language as the primary instrument of control. Examines how the International Fleet and Peter/Valentine's
+        Locke/Demosthenes personas use doublespeak to construct reality and manufacture consent.
+      </p>
+      <a href="Essay_2_Fascist_Doublespeak.docx" download class="essay-btn">Download Essay</a>
+    </div>
+
+    <div class="essay-card">
+      <div class="essay-header">
+        <span class="essay-badge" style="background:var(--ri3-bg);color:var(--ri3)">RI 3</span>
+        <h3>Collectivism as a State Tool</h3>
+      </div>
+      <p class="essay-desc">
+        How Battle School engineers group identity to dissolve individual autonomy. Analyzes the army system,
+        the "hive mind" representation of Formics, and how collectivism legitimates violence.
+      </p>
+      <a href="Essay_3_Collectivism_State_Tool.docx" download class="essay-btn">Download Essay</a>
+    </div>
+
+    <div class="essay-card">
+      <div class="essay-header">
+        <span class="essay-badge" style="background:var(--ri4-bg);color:var(--ri4)">RI 4</span>
+        <h3>Enlightenment Rationality Justifying Empire</h3>
+      </div>
+      <p class="essay-desc">
+        How reason becomes a tool of domination. Explores how the rhetoric of survival, progress, and rational
+        necessity is used to legitimate child conscription, xenocide, and colonial expansion.
+      </p>
+      <a href="Essay_4_Enlightenment_Rationality_Empire.docx" download class="essay-btn">Download Essay</a>
+    </div>
+
+    <div class="essay-card">
+      <div class="essay-header">
+        <span class="essay-badge" style="background:var(--ri5-bg);color:var(--ri5)">RI 5</span>
+        <h3>Othering and State Power</h3>
+      </div>
+      <p class="essay-desc">
+        How the enemy is constructed through representation. Examines the dehumanization of Formics, racist/sexist
+        slurs among students, and how othering makes violence morally permissible.
+      </p>
+      <a href="Essay_5_Othering_State_Power.docx" download class="essay-btn">Download Essay</a>
+    </div>
+
+    <div class="essay-card">
+      <div class="essay-header">
+        <span class="essay-badge" style="background:var(--ri6-bg);color:var(--ri6)">RI 6</span>
+        <h3>Adolescent Mimicry of Prejudice</h3>
+      </div>
+      <p class="essay-desc">
+        How children reproduce adult power structures. Analyzes how students at Battle School internalize and
+        perform racism, misogyny, and homophobia as learned survival strategies.
+      </p>
+      <a href="Essay_6_Adolescent_Mimicry_Prejudice.docx" download class="essay-btn">Download Essay</a>
+    </div>
+  </div>
+</section>
+
+<!-- LITERARY CRAFT -->
+<div class="divider"></div>
+<section class="section" id="craft">
+  <div class="section-header">
+    <div class="section-label">06 — Literary Craft</div>
+    <h2>Stylistic &amp; Narrative Techniques</h2>
+    <p>
+      Card's novel isn't just what it says — it's how it says it. These literary devices shape meaning,
+      build atmosphere, and reveal themes that aren't stated directly. Use these in your analysis to show
+      how form and content work together.
+    </p>
+  </div>
+
+  <div class="craft-grid">
+    <div class="craft-card">
+      <div class="craft-header">
+        <span class="craft-icon">📜</span>
+        <h3>Historical Allusions</h3>
+      </div>
+      <p class="craft-analysis">
+        Card layers the text with references to historical figures and empires — Alexander, Napoleon, Pericles,
+        Demosthenes, Pax Americana, Caesar. These aren't decorative; they position the novel within a tradition
+        of imperial conquest and charismatic leadership. When Peter asks "How old was Alexander?", he's not just
+        curious — he's identifying with a model of world domination achieved young. The allusions function as
+        <strong>ideological shorthand</strong>: they invoke entire systems of power without needing to explain them.
+      </p>
+      <div class="craft-quotes">
+        <div class="craft-quote">
+          <blockquote>"Think what Pericles did in Athens, and Demosthenes—"</blockquote>
+          <p class="quote-context">Peter invoking rhetoricians who shaped empires through language, not armies.</p>
+        </div>
+        <div class="craft-quote">
+          <blockquote>"A Pax Americana through the whole world."</blockquote>
+          <p class="quote-context">Direct parallel to Pax Romana — peace through domination.</p>
+        </div>
+        <div class="craft-quote">
+          <blockquote>"We need a Napoleon. An Alexander."</blockquote>
+          <p class="quote-context">The International Fleet explicitly seeking child conquerors modeled on history's youngest empire-builders.</p>
+        </div>
+        <div class="craft-quote">
+          <blockquote>"The little village that had grown up between the Giant's ribs was composed of buggers now, and they saluted him gravely, like gladiators greeting Caesar."</blockquote>
+          <p class="quote-context">Ender positioned as Caesar — the conquered saluting their conqueror. The gladiator image reinforces the violence underlying the "salute."</p>
+        </div>
+      </div>
+      <p class="craft-effect"><strong>Analytical use:</strong> When writing about empire or domination, point to these allusions to show how Card situates the novel within historical patterns of conquest. The repetition of these references naturalizes imperial logic — it makes readers think of conquest as historically inevitable rather than politically chosen.</p>
+    </div>
+
+    <div class="craft-card">
+      <div class="craft-header">
+        <span class="craft-icon">💀</span>
+        <h3>The Giant's Corpse Motif</h3>
+      </div>
+      <p class="craft-analysis">
+        The Giant's corpse appears throughout the novel as a recurring image in Ender's game simulations and
+        eventually in physical reality. Card uses it to represent <strong>the legacy of colonial violence</strong> —
+        the way conquered peoples and territories become the foundation (literally, the ground) on which empires build.
+        The giant is dead, eroded, overgrown, but everything after depends on its body. The dwarves build a village
+        in its ribs. Later, the buggers occupy that same space. The image suggests that all "civilization" is
+        constructed atop prior violence, and that this violence is never fully erased — it remains, visible but
+        normalized, as landscape.
+      </p>
+      <div class="craft-quotes">
+        <div class="craft-quote">
+          <blockquote>"It was hardly identifiable as a corpse at all, unless you stood off a ways and studied it. The body had eroded into a hell, entwined with grass and vines ... it was white bone, like limestone from a discouraged withering mountain."</blockquote>
+          <p class="quote-context">The giant as geological formation — violence naturalized as terrain.</p>
+        </div>
+        <div class="craft-quote">
+          <blockquote>"The village that the dwarves had built in the hill made by the Giant's corpse."</blockquote>
+          <p class="quote-context">Civilization built literally on top of death. The dwarves don't bury the giant; they inhabit it.</p>
+        </div>
+        <div class="craft-quote">
+          <blockquote>"In the other direction the hill rose to a piece of white rock, grinning like a skull with a tree growing out of its mouth."</blockquote>
+          <p class="quote-context">Life growing from death — but the skull remains, grinning. The violence is visible even as it's overgrown.</p>
+        </div>
+      </div>
+      <p class="craft-effect"><strong>Analytical use:</strong> Use this motif when discussing colonialism, the normalization of violence, or how Card represents historical memory. The giant's corpse shows that empires don't simply forget their violence — they build on it, and the structure of what comes after is shaped by what was destroyed to make space for it.</p>
+    </div>
+
+    <div class="craft-card">
+      <div class="craft-header">
+        <span class="craft-icon">🔮</span>
+        <h3>Foreshadowing</h3>
+      </div>
+      <p class="craft-analysis">
+        Card seeds the novel with moments that prefigure Ender's eventual revelation and his rejection of violence.
+        These aren't random — they establish a pattern where Ender is unknowingly enacting a script that's already
+        been written. The Daniel story (interpreting a forgotten dream) mirrors Ender's role: he performs actions
+        whose meaning is hidden from him but known to others. The snake-kissing moment foreshadows his eventual
+        empathy for the Formics — an act of gentleness toward something coded as monstrous. Card uses foreshadowing
+        to create <strong>dramatic irony</strong>: readers may sense something Ender doesn't, which makes his
+        manipulation by the adults even more tragic.
+      </p>
+      <div class="craft-quotes">
+        <div class="craft-quote">
+          <blockquote>"The king had a dream,' said Valentine, 'but he forgot what it was, so he told his wise men to interpret the dream or they'd die. Only Daniel could interpret it, because he was a prophet."</blockquote>
+          <p class="quote-context">Ender will be made to enact a "dream" (the simulations) whose true meaning he doesn't know until after.</p>
+        </div>
+        <div class="craft-quote">
+          <blockquote>"He caught it in his hands, knelt before it, and gently, so gently, brought the snake's gaping mouth to his lips. And kissed."</blockquote>
+          <p class="quote-context">Ender's capacity for empathy toward the "monstrous" — foreshadowing his eventual understanding of the Formics. The kiss reverses the expected violence.</p>
+        </div>
+      </div>
+      <p class="craft-effect"><strong>Analytical use:</strong> Point to these moments when discussing Card's narrative structure or Ender's arc. Foreshadowing shows that Ender's path was always leading toward the revelation — the novel is structured so that the truth was always present, just hidden. This reinforces the theme of manipulation: Ender's fate was predetermined, and the foreshadowing makes that visible to readers even as it remains invisible to him.</p>
+    </div>
+
+    <div class="craft-card" style="border: 2px solid var(--gold);">
+      <div class="craft-header">
+        <span class="craft-icon">💬</span>
+        <h3>Language as Power &amp; Internet Culture</h3>
+      </div>
+      <p class="craft-analysis">
+        Card wrote <em>Ender's Game</em> in 1985, decades before social media, but the Locke/Demosthenes subplot
+        <strong>eerily prefigures contemporary internet culture</strong>: anonymous identities, bot-like personas,
+        algorithmic manipulation of public discourse, and the weaponization of language for political ends. Peter
+        and Valentine demonstrate that <strong>you don't need to be who you claim to be online</strong> — you only
+        need to perform the identity convincingly enough to shape opinion. The "nets" in the novel function exactly
+        like modern platforms: spaces where language circulates, identities are constructed, and power accumulates
+        through influence rather than force. This makes the novel disturbingly relevant: it shows that the logic
+        of manipulation we associate with Twitter bots, troll farms, and disinformation campaigns isn't new —
+        it's the structure of how language has always operated in systems designed to control public thought.
+      </p>
+      <div class="craft-quotes">
+        <div class="craft-quote" style="border-left-color: var(--gold);">
+          <blockquote>"Not on the nets I'm not. On the nets I can name myself anything I want, and so can you."</blockquote>
+          <p class="quote-context">Anonymous identity as strategy — exactly how internet culture operates. The "nets" allow performance without accountability.</p>
+        </div>
+        <div class="craft-quote" style="border-left-color: var(--gold);">
+          <blockquote>"Bernard's attempt to be ruler ... was broken ... the tampering had done its work. Bernard was contained ... Ender had done it without sending him to the hospital. Much better this way."</blockquote>
+          <p class="quote-context">Language as weapon more effective than physical violence. Ender destroys Bernard's social power through words — a tactic central to online harassment and cancel culture.</p>
+        </div>
+        <div class="craft-quote" style="border-left-color: var(--gold);">
+          <blockquote>"It's also status, identity, purpose, name; all that makes these children who they are."</blockquote>
+          <p class="quote-context">Language constructs identity — online and offline. What you're called shapes what you become.</p>
+        </div>
+        <div class="craft-quote" style="border-left-color: var(--gold);">
+          <blockquote>"When they started singing the taunts like nursery rhymes, some of the older boys launched themselves from the wall and came out for a fight."</blockquote>
+          <p class="quote-context">Viral language inciting real violence — the exact mechanic of how online discourse escalates into physical harm.</p>
+        </div>
+        <div class="craft-quote" style="border-left-color: var(--gold);">
+          <blockquote>"Peter had even named it once, when he said that he could always see what other people hated most about themselves, and bully them, while Val could always see what other people liked best about themselves, and flatter them."</blockquote>
+          <p class="quote-context">The dual strategy of trolling and influencing — exploitation and flattery as complementary tools of manipulation.</p>
+        </div>
+        <div class="craft-quote" style="border-left-color: var(--gold);">
+          <blockquote>"So the whole war is because we can't talk to each other."</blockquote>
+          <p class="quote-context">Communication failure as the root of violence — but also a recognition that language is the battlefield.</p>
+        </div>
+      </div>
+      <p class="craft-effect"><strong>Analytical use:</strong> This is gold for contemporary relevance. Use these quotes when arguing that Card anticipated modern disinformation, that the novel critiques how online discourse can be weaponized, or that the "nets" function as a prototype for understanding social media's role in shaping political reality. <strong>The novel's prescience makes it more analytically useful now than it was in 1985.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH PAPER -->
+<div class="divider"></div>
+<section class="section" id="research">
+  <div class="section-header">
+    <div class="section-label">07 — Extension</div>
+    <h2>Academic Research Paper</h2>
+    <p>
+      <strong>For advanced students:</strong> A university-level critical analysis examining how Card's novel
+      prefigures contemporary forms of ideological manipulation and control. Uses theoretical frameworks from
+      Foucault, Butler, Mbembe, Said, and Althusser. 40+ scholarly sources. Download to read offline or view
+      the embedded version below.
+    </p>
+    <a href="Enders_Game_Research_Paper.docx" download class="research-download-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      Download Research Paper
+    </a>
+  </div>
+
+  <div class="research-embed-note">
+    <p><strong>Title:</strong> "Weaponising the Young: Language, Ideology, and Social Control in Orson Scott Card's <em>Ender's Game</em>"</p>
+    <p><strong>Abstract:</strong> This paper examines how Card reveals mechanisms through which authoritarian structures deploy language and ideology to control adolescents. Key analyses include bot-farming prefiguration (Locke/Demosthenes), internal homophobia, high-expectation bigotry, Asiatic hordes trope, and Peter's hegemonic subversion.</p>
+  </div>
+
+  <div class="research-note">
+    <p>
+      <strong>Note on format:</strong> The research paper is provided as a downloadable Word document. If you need help
+      viewing it, ask your teacher for assistance or use the download button above to save it to your device.
+    </p>
+  </div>
 </section>
 
 <!-- FOOTER -->
@@ -608,6 +1098,33 @@ const RI_DATA = [
       { text: "She had thought that only fools would follow him.", context: "Valentine on Peter — but the text shows how 'following' is engineered, not chosen." },
       { text: "Even if she wrote it in her own blood, it isn't the real thing because they made her write it … this was part of their manipulation.", context: "Valentine's self-awareness — but the manipulation still works." }
     ]
+  },
+  {
+    id: 7, label: "RI 7", color: "var(--ri7)", bg: "var(--ri7-bg)", border: "var(--ri7-border)",
+    title: "Children as Subservient Tools",
+    subtitle: "How the institution treats children as instruments rather than persons",
+    analysis: `Card systematically demonstrates that the International Fleet does not value children as individuals with rights, autonomy, or personhood. Children are <strong>tools to be used</strong> — weapons, instruments, means to institutional ends. The novel's horror is not simply that children are conscripted into war, but that the adults <strong>do not see this as a problem</strong>. The system is designed to produce a specific kind of subject: one who understands their own value only in terms of their utility to the collective. Card shows that this reduction of children to tools is not accidental brutality but <strong>institutional logic</strong>. The children are not abused despite the system; they are used <em>because of</em> it. This representative idea connects to all the others: symbolic violence works because children internalize their own instrumentalization; doublespeak frames exploitation as opportunity; collectivism erases the individual child into the mass; rationality justifies their use as necessary; othering makes some children more disposable than others; and mimicry ensures the next generation will perpetuate the same logic.`,
+    quotes: [
+      { text: "Frightened children are so easy to win.", context: "The institution's explicit recognition that fear makes children compliant — and useful." },
+      { text: "The children were easily dispatched, though they began following him in twos and threes at the end.", context: "Children as obstacles to be 'dispatched' — language that dehumanizes them into problems to be solved." },
+      { text: "'I've got a pretty good idea what children are, and we're not children.'", context: "Ender's internalization of the institution's logic: to be useful, he must reject his own childhood." },
+      { text: "'We aren't just ordinary children, are we. None of us.'", context: "The fantasy of exceptionalism — the children believe they are special, which makes their exploitation feel like recognition rather than use." },
+      { text: "You had to kill the children to get to the end of the world.", context: "The game's metaphor made literal — the novel's structure requires the sacrifice of children." },
+      { text: "Then he went to bed and slept again and dreamed again and then he woke up and won again and slept again and he hardly noticed when waking became sleeping.", context: "The dissolution of Ender's selfhood into pure function — sleep, fight, repeat. He is no longer a person; he is a process." }
+    ]
+  },
+  {
+    id: 8, label: "RI 8", color: "var(--ri8)", bg: "var(--ri8-bg)", border: "var(--ri8-border)",
+    title: "The Cycle of Violence",
+    subtitle: "How trauma reproduces itself across generations",
+    analysis: `Card reveals that violence is not an aberration but a <strong>self-replicating system</strong>. Those who are victimized become victimizers; those who are hurt learn to hurt. Ender recognizes this pattern explicitly — "Why am I doing this? Just because they did it to me, why should I do it to him?" — but recognition does not break the cycle. The novel demonstrates that institutional violence creates subjects who cannot escape the logic of domination even when they are aware of it. This is the mechanism through which authoritarian systems perpetuate themselves: they do not need to explicitly teach cruelty, because cruelty becomes the <strong>default survival strategy</strong> in environments structured by violence. The children at Battle School are not naturally violent; they are made violent by a system that rewards aggression and punishes vulnerability. Card's bleakest insight is that this cycle operates even in those who understand it — Ender knows he is replicating the violence done to him, and he does it anyway, because the institution has made violence the only viable response to threat.`,
+    quotes: [
+      { text: "Why am I doing this? ... Just because they did it to me, why should I do it to him?", context: "Ender's self-awareness does not stop him. The cycle is stronger than individual conscience." },
+      { text: "Is it some law of human nature that you inevitably become whatever your first commander was?", context: "The recognition that power structures reproduce themselves through subjects who internalize and perform the roles they were taught." },
+      { text: "'We really are trying to be adults. Just like our fathers.'", context: "Valentine's observation that mimicry is aspiration — the children see the violence of the adult world as maturity, not pathology." },
+      { text: "One of them would be Valentine, and in his dream he also shoved her under the water and waited for her to drown. She writhed in his hands, fought to come up, but at last she was still.", context: "Ender's nightmares reveal that violence has colonized even his unconscious — he cannot escape it even in sleep." },
+      { text: "You had to kill the children to get to the end of the world.", context: "The game's logic made explicit: the cycle of violence requires the sacrifice of the next generation." }
+    ]
   }
 ];
 
@@ -616,10 +1133,10 @@ const CHARACTERS = [
     desc: "The child genius recruited by the I.F. to lead humanity's defence against the Formics. Card uses Ender to show how institutions shape identity — Ender is compassionate by nature, but the system systematically breaks him down to make him useful. By the end, he's committed genocide without knowing it, and the novel asks whether he's a victim or a perpetrator.",
     ris: [1,2,3,6] },
   { name: "Peter Wiggin", role: "Ender's older brother", initials: "PW", color: "#d45a4a", bg: "rgba(212,90,74,0.15)",
-    desc: "Psychopathic, brilliant, and politically ruthless. Peter becomes the online persona 'Demosthenes' — a paranoid anti-Russian propagandist. Card uses Peter to show how <strong>language is the primary instrument of power</strong>. Peter doesn't need armies. He needs the right words at the right time. He's the novel's thesis on doublespeak made flesh.",
+    desc: "Psychopathic, brilliant, and politically ruthless. Peter becomes the online persona 'Locke' — a moderate, reasonable voice that builds credibility slowly. Card uses Peter to show how <strong>language is the primary instrument of power</strong>. Peter doesn't need armies. He needs the right words at the right time. He's the novel's thesis on doublespeak made flesh.",
     ris: [2,4] },
   { name: "Valentine Wiggin", role: "Ender's older sister", initials: "VW", color: "#7b6b9e", bg: "rgba(123,107,158,0.15)",
-    desc: "Empathetic, intelligent, and increasingly complicit. Valentine becomes 'Locke' — a moderate, persuasive online voice. Card uses her to show how <strong>even people who understand manipulation can be drawn into it</strong>. Her awareness doesn't protect her. The system uses her empathy as a lever.",
+    desc: "Empathetic, intelligent, and increasingly complicit. Valentine becomes 'Demosthenes' — a paranoid, inflammatory anti-Russian propagandist. Card uses her to show how <strong>even people who understand manipulation can be drawn into it</strong>. Her awareness doesn't protect her. The system uses her empathy as a lever.",
     ris: [2,6] },
   { name: "Colonel Graff", role: "I.F. commander / recruiter", initials: "CG", color: "#c9953a", bg: "rgba(201,149,58,0.15)",
     desc: "The institution's face. Graff recruits Ender, lies to him, isolates him, and systematically destroys his relationships — all in the name of producing a weapon. Card uses Graff to represent <strong>how bureaucratic power operates through individuals</strong> who may genuinely believe they're serving a higher purpose.",
@@ -824,7 +1341,7 @@ function renderQuotes() {
 
 // ─── NAV HIGHLIGHT ON SCROLL ────────────────────────────────────
 function updateNav() {
-  const sections = ['overview','ri','characters','quotes'];
+  const sections = ['overview','ri','characters','quotes','essays','craft','research'];
   let current = '';
   sections.forEach(id => {
     const el = document.getElementById(id);
